@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		88CC89B62B82C14100358079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89B52B82C14100358079 /* AppDelegate.swift */; };
 		88CC89B82B82C14100358079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89B72B82C14100358079 /* SceneDelegate.swift */; };
-		88CC89BA2B82C14100358079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89B92B82C14100358079 /* ViewController.swift */; };
-		88CC89BD2B82C14100358079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CC89BB2B82C14100358079 /* Main.storyboard */; };
+		88CC89BA2B82C14100358079 /* MainModuleViewController.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89B92B82C14100358079 /* MainModuleViewController.swift.swift */; };
 		88CC89BF2B82C14300358079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CC89BE2B82C14300358079 /* Assets.xcassets */; };
 		88CC89C22B82C14300358079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CC89C02B82C14300358079 /* LaunchScreen.storyboard */; };
+		88CC89CC2B82C50C00358079 /* ModuleBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89CB2B82C50C00358079 /* ModuleBulder.swift */; };
+		88CC89D02B82C58B00358079 /* MainModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89CF2B82C58B00358079 /* MainModulePresenter.swift */; };
+		88CC89D42B82C6AB00358079 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC89D32B82C6AB00358079 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88CC89B22B82C14100358079 /* iOS12-HW16 - Ershova Olesya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS12-HW16 - Ershova Olesya.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CC89B52B82C14100358079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CC89B72B82C14100358079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88CC89B92B82C14100358079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88CC89BC2B82C14100358079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88CC89B92B82C14100358079 /* MainModuleViewController.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleViewController.swift.swift; sourceTree = "<group>"; };
 		88CC89BE2B82C14300358079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88CC89C12B82C14300358079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CC89C32B82C14300358079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88CC89CB2B82C50C00358079 /* ModuleBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBulder.swift; sourceTree = "<group>"; };
+		88CC89CF2B82C58B00358079 /* MainModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModulePresenter.swift; sourceTree = "<group>"; };
+		88CC89D32B82C6AB00358079 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		88CC89B42B82C14100358079 /* iOS12-HW16 - Ershova Olesya */ = {
 			isa = PBXGroup;
 			children = (
+				88CC89C92B82C4BC00358079 /* App */,
+				88CC89CA2B82C4D600358079 /* CalculationModule */,
+				88CC89D52B82C6D400358079 /* Resources */,
+			);
+			path = "iOS12-HW16 - Ershova Olesya";
+			sourceTree = "<group>";
+		};
+		88CC89C92B82C4BC00358079 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				88CC89B52B82C14100358079 /* AppDelegate.swift */,
 				88CC89B72B82C14100358079 /* SceneDelegate.swift */,
-				88CC89B92B82C14100358079 /* ViewController.swift */,
-				88CC89BB2B82C14100358079 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		88CC89CA2B82C4D600358079 /* CalculationModule */ = {
+			isa = PBXGroup;
+			children = (
+				88CC89CD2B82C52A00358079 /* Builder */,
+				88CC89CE2B82C56600358079 /* Presenter */,
+				88CC89D12B82C60200358079 /* View */,
+				88CC89D22B82C68600358079 /* Model */,
+			);
+			path = CalculationModule;
+			sourceTree = "<group>";
+		};
+		88CC89CD2B82C52A00358079 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				88CC89CB2B82C50C00358079 /* ModuleBulder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		88CC89CE2B82C56600358079 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				88CC89CF2B82C58B00358079 /* MainModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		88CC89D12B82C60200358079 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88CC89B92B82C14100358079 /* MainModuleViewController.swift.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CC89D22B82C68600358079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88CC89D32B82C6AB00358079 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88CC89D52B82C6D400358079 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				88CC89BE2B82C14300358079 /* Assets.xcassets */,
 				88CC89C02B82C14300358079 /* LaunchScreen.storyboard */,
 				88CC89C32B82C14300358079 /* Info.plist */,
 			);
-			path = "iOS12-HW16 - Ershova Olesya";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +189,6 @@
 			files = (
 				88CC89C22B82C14300358079 /* LaunchScreen.storyboard in Resources */,
 				88CC89BF2B82C14300358079 /* Assets.xcassets in Resources */,
-				88CC89BD2B82C14100358079 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88CC89BA2B82C14100358079 /* ViewController.swift in Sources */,
+				88CC89BA2B82C14100358079 /* MainModuleViewController.swift.swift in Sources */,
 				88CC89B62B82C14100358079 /* AppDelegate.swift in Sources */,
 				88CC89B82B82C14100358079 /* SceneDelegate.swift in Sources */,
+				88CC89D42B82C6AB00358079 /* Model.swift in Sources */,
+				88CC89CC2B82C50C00358079 /* ModuleBulder.swift in Sources */,
+				88CC89D02B82C58B00358079 /* MainModulePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88CC89BB2B82C14100358079 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				88CC89BC2B82C14100358079 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		88CC89C02B82C14300358079 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,10 +350,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VV2V8VTSHT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW16 - Ershova Olesya/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW16 - Ershova Olesya/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -327,10 +382,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VV2V8VTSHT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS12-HW16 - Ershova Olesya/Info.plist";
+				INFOPLIST_FILE = "iOS12-HW16 - Ershova Olesya/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
